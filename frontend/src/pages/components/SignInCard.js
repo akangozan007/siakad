@@ -131,7 +131,7 @@ export default function SignInCard() {
               variant="body2"
               sx={{ alignSelf: 'baseline' }}
             >
-              Forgot your password?
+              Lupa sandi?
             </Link>
           </Box>
           <TextField
@@ -151,21 +151,21 @@ export default function SignInCard() {
         </FormControl>
         <FormControlLabel
           control={<Checkbox value="remember" color="primary" />}
-          label="Remember me"
+          label="Ingat saya"
         />
         <ForgotPassword open={open} handleClose={handleClose} />
         <Button type="submit" fullWidth variant="contained" onClick={validateInputs}>
           Sign in
         </Button>
         <Typography sx={{ textAlign: 'center' }}>
-          Don&apos;t have an account?{' '}
+         Pengguna baru?{' '}
           <span>
             <Link
               href="/material-ui/getting-started/templates/sign-in/"
               variant="body2"
               sx={{ alignSelf: 'center' }}
             >
-              Sign up
+              <i>Daftar</i>
             </Link>
           </span>
         </Typography>
@@ -178,7 +178,7 @@ export default function SignInCard() {
           onClick={() => alert('Sign in with Google')}
           startIcon={<GoogleIcon />}
         >
-          Sign in with Google
+          Login dengan google
         </Button>
         <Button
           fullWidth
@@ -186,7 +186,7 @@ export default function SignInCard() {
           onClick={() => alert('Sign in with Facebook')}
           startIcon={<FacebookIcon />}
         >
-          Sign in with Facebook
+          Login dengan Facebook
         </Button>
       </Box>
     </Card>

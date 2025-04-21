@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Box, Container, Button, Stack, Typography } from '@mui/material';
 
 function Home() {
+  const [hoverLogin, setHoverLogin] = useState(false);
+  const [hoverDaftar, setHoverDaftar] = useState(false);
   return (
     <>
       <Navbar />
@@ -20,7 +22,7 @@ function Home() {
         }}
       >
         <Container>
-          <Stack spacing={4} alignItems="start" textAlign="start">
+          <Stack spacing={2} alignItems="start" textAlign="start">
             <Typography variant="h1" sx={{ color: 'white', fontWeight: 'bolder' }}>
               SIAKAD
             </Typography>
@@ -30,12 +32,23 @@ function Home() {
               Information System
             </Typography>
             <Stack direction="row" spacing={2}>
-              <Button variant="contained" color="primary">
-                Login
-              </Button>
-              <Button variant="outlined" color="primary">
+                <Button
+                    variant={hoverLogin ? 'outlined' : 'contained'}
+                    color="primary"
+                    onMouseEnter={() => setHoverLogin(true)}
+                    onMouseLeave={() => setHoverLogin(false)}
+                    >
+                    Login
+                </Button>
+                <Button
+                variant={hoverDaftar ? 'contained' : 'outlined'}
+                color="primary"
+                onMouseEnter={() => setHoverDaftar(true)}
+                onMouseLeave={() => setHoverDaftar(false)}
+                sx={{ ml: 2 }}
+            >
                 Daftar
-              </Button>
+            </Button>
             </Stack>
           </Stack>
         </Container>

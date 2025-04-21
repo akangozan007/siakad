@@ -11,27 +11,27 @@ import { SitemarkIcon } from './CustomIcons';
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon sx={{ color: 'text.secondary' }} />,
-    title: 'Adaptable performance',
+    title: 'Academic Information System',
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+      'An Academic Information System (AIS) is a comprehensive software application designed to manage, process, and organize academic-related information in an educational institution. It provides a centralized platform for students, teachers, and administrative staff to manage academic data efficiently.',
   },
   {
     icon: <ConstructionRoundedIcon sx={{ color: 'text.secondary' }} />,
-    title: 'Built to last',
+    title: 'Administrator Features in Academic Information System (SIA)',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      'The Administrator is a key role within the Academic Information System (AIS), responsible for managing the overall system, overseeing user roles, and ensuring smooth operation of the platform. Administrators have full access to all features and functions, allowing them to configure, monitor, and control various aspects of the system.',
   },
   {
     icon: <ThumbUpAltRoundedIcon sx={{ color: 'text.secondary' }} />,
-    title: 'Great user experience',
+    title: 'Modern and Responsive Design',
     description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
+      'To create a modern and responsive design in an Academic Information System (SIA), we must ensure that the user interface (UI) adapts well to various devices (such as desktop, tablet, and mobile) and also looks attractive and is easy to use',
   },
   {
     icon: <AutoFixHighRoundedIcon sx={{ color: 'text.secondary' }} />,
-    title: 'Innovative functionality',
+    title: 'Fast and Secure Data Processing with API Integration',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+      'In an Academic Information System (SIA), data processing becomes both faster and more secure when integrated with APIs (Application Programming Interfaces). By utilizing RESTful APIs or GraphQL, data can be efficiently transmitted and processed between the server and the client with minimal latency, providing a smooth and responsive user experience',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Content() {
       sx={{ flexDirection: 'column', alignSelf: 'center', gap: 4, maxWidth: 450 }}
     >
       <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-        <SitemarkIcon />
+        {/* <SitemarkIcon /> */}
       </Box>
       {items.map((item, index) => (
         <Stack key={index} direction="row" sx={{ gap: 2 }}>

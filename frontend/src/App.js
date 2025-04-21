@@ -1,9 +1,19 @@
-import Home from './pages/home/home';
-
+import { BrowserRouter } from 'react-router-dom'; // ✅
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
-   <Home />
+  //  <Home />
+  // <Router>
+  //   <Routes>
+  //     <Route path="/" element={<Home />} />
+  //     <Route path="/login" element={<Login />} />
+  //     {/* <Route path="/daftar" element={<Daftar />} /> */}
+  //   </Routes>
+  // </Router>
+  <BrowserRouter>
+      <AppRoutes />
+  </BrowserRouter>
   );
 }
 
