@@ -2,14 +2,14 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/home/home';
 import Login from '../pages/login/Login';
-// import Daftar from '../pages/Daftar';
+import Daftar from '../pages/daftar/Daftar';
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      {/* <Route path="/daftar" element={<Daftar />} /> */}
+      <Route path="/daftar" element={<Daftar />} />
     </Routes>
   );
 }

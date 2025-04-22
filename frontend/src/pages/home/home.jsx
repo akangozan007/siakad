@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Box, Container, Button, Stack, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [hoverLogin, setHoverLogin] = useState(false);
   const [hoverDaftar, setHoverDaftar] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar />
@@ -37,8 +40,9 @@ function Home() {
                     color="primary"
                     onMouseEnter={() => setHoverLogin(true)}
                     onMouseLeave={() => setHoverLogin(false)}
+                    onClick={() => navigate('/login')}
                     >
-                    Login
+                Login
                 </Button>
                 <Button
                 variant={hoverDaftar ? 'contained' : 'outlined'}
@@ -46,8 +50,10 @@ function Home() {
                 onMouseEnter={() => setHoverDaftar(true)}
                 onMouseLeave={() => setHoverDaftar(false)}
                 sx={{ ml: 2 }}
+                onClick={() => navigate('/daftar')}
+            
             >
-                Daftar
+              Daftar
             </Button>
             </Stack>
           </Stack>
